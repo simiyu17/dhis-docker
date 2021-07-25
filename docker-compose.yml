@@ -11,6 +11,8 @@ services:
       POSTGRES_PASSWORD: dhis
     volumes:
     - /root/dhis2_home/dhisdata:/var/lib/postgresql/data
+    ports:
+    - "5432:5432"
   web:
     image: dhis2/core:2.33.0
     volumes:
